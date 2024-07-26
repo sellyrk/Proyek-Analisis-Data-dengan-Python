@@ -55,7 +55,7 @@ def create_rfm_df(df):
     return rfm_df
 
 #Memanggil dataframe
-all_df = pd.read_csv("C:\\Users\\dell\\submission\\dashboard\\all_data.csv")
+all_df = pd.read_csv("all_data.csv")
 all_df
 
 #Mengurutkan order data dan memastikan tipenya sudah bertipe datetime
@@ -71,8 +71,8 @@ min_date = all_df["dteday"].min()
 max_date = all_df["dteday"].max()
  
 with st.sidebar:
-    # Menambahkan logo perusahaan
-    st.image("C:\\Users\\dell\\submission\\dashboard\\img_106157_bg_shutterstock_609554810.jpg")
+    image_path = ("img_106157_bg_shutterstock_609554810.png")
+    st.image(image_path)
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
